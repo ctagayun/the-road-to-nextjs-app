@@ -1,0 +1,42 @@
+link to Robin's Github Repo: https://github.com/rwieruch
+
+- Setup project from scratch
+      md the-road-to-react
+      cd 
+      npm init 
+
+      npm install react react-dom next (will show dependencies in pkg.json
+
+      change script to:"dev": "next dev"
+         so that we have a development server
+
+      . md app -->  touch app/layout.js touch app/page.js
+         - will contain all the routing (NO NEEE creating a separate 'PAGES" folder)
+ 
+ NEXT.JS - https://nextjs.org/
+   1. npx create-next-app@latest the-road-to-nextjs-app
+
+      - Apparently, the default setup for a Next.js installation no longer includes
+      the src/ folder. However, for this course, we'll be using the src/ folder, 
+      as shown in the video, since it's a better approach for managing larger 
+      applications down the road.
+
+      - go to https://nextjs.org/blog/next-15-rc
+
+      - copy and run: npm install next@rc react@rc react-dom@rc --force
+
+   2. Exploring the NextJS Starter file
+      - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/54082445
+
+      - if anyone wants to replicate your project setup all they need to copy are;
+          package.json and package.lock.json and run npm install and they 
+          get exact "node_modules"
+
+   3. https://github.com/rwieruch
+
+
+   4. Deploy
+       - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/54082443
+
+   5. Lint 
+        npm run lint
