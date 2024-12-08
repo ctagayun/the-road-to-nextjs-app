@@ -38,5 +38,13 @@ link to Robin's Github Repo: https://github.com/rwieruch
    4. Deploy
        - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/54082443
 
+       - first push the-road-to-nextjs-app to git hub 
+       - second create an account in VERCEL
+         https://vercel.com/domingo-tagayuns-projects
+         USERID = CTAGAYUN2gmail.com
+
+         - deploy the-road-to-nextjs-app to vercel
+           first connect my github account to vercel.
+           add the-road-to-nextjs-app to vercel
    5. Lint 
         npm run lint
