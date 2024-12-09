@@ -120,3 +120,14 @@ link to Robin's Github Repo: https://github.com/rwieruch
            add the-road-to-nextjs-app to vercel
    5. Lint 
         npm run lint
+
+   6. How to navigate to target pages
+        - Note: the "App" folder is responsible or the ORIGIN  of routing.
+          The "App" since it is responsible for routing it is no 
+          displayed in the URL
+
+        Example:
+          app/page --> localhost:3000
+          app/tickets/page.tsx --> localhost:3000/tickets
+          app/tickets/create/page.tsx --> localhost:3000/tickets/create
+          app/about/page.tsx --> localhost:3000/about
