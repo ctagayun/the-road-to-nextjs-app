@@ -121,7 +121,8 @@ link to Robin's Github Repo: https://github.com/rwieruch
    5. Lint 
         npm run lint
 
-   6. How to navigate to target pages
+   6. Pages: How to navigate to target pages
+       https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53630910
         - Note: the "App" folder is responsible or the ORIGIN  of routing.
           The "App" since it is responsible for routing it is no 
           displayed in the URL
@@ -131,3 +132,13 @@ link to Robin's Github Repo: https://github.com/rwieruch
           app/tickets/page.tsx --> localhost:3000/tickets
           app/tickets/create/page.tsx --> localhost:3000/tickets/create
           app/about/page.tsx --> localhost:3000/about
+
+   7: Static and Dynamic Routes: 
+       - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53630910
+      
+       -  dynamic route 
+          /tickets
+            /[ticketID] you can insert any ticketId here
+               page.tsx
+
+          then modify TicketPage
