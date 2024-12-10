@@ -151,6 +151,9 @@ link to Robin's Github Repo: https://github.com/rwieruch
                  The code will be: 
             /tickets
               [ticketId]
-                page.tsx
-                /edit 
-                page.tsx
+                 page.tsx
+                 /edit 
+                  page.tsx
+
+   8. Linked Components
+       - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53630962
