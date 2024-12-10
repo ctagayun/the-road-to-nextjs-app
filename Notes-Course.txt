@@ -135,10 +135,23 @@ link to Robin's Github Repo: https://github.com/rwieruch
 
    7: Static and Dynamic Routes: 
        - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53630910
-      
+       - authors solution: https://github.com/rwieruch/the-road-to-next-app/tree/2024-11_files-based-routing_static-and-dynamic-routes
+
        -  dynamic route 
           /tickets
-            /[ticketID] you can insert any ticketId here
+            /[ticketId] you can insert any ticketId here
                page.tsx
 
-          then modify TicketPage
+          
+
+       - How would you implement a TicketEditPage which gets available at
+            /tickets/[ticketId]/edit
+
+         Answer: src/app/tickets/[ticketId]/edit/page.tsx 
+                 The code will be: 
+            /tickets
+              [ticketId]
+              page.tsx
+            /edit 
+              [ticketId]
+              page.tsx
