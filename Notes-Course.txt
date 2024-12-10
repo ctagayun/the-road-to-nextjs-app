@@ -157,3 +157,11 @@ link to Robin's Github Repo: https://github.com/rwieruch
 
    8. Linked Components
        - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53630962
+
+       - modify HomePage
+       - modify TicketPage to display list of tickets 
+            /tickets
+              /[ticketId]
+                /edit
+                  page.tsx
+            page.tsx (this is the TicketPage)
