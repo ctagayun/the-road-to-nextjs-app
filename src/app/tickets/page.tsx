@@ -1,31 +1,20 @@
+import Link from "next/link";
+import { initialTickets } from "../../data";
 
-//*This component displays a specific TICKET ID
+const TicketsPage = () => {
+  return (
+    <div>
+      {initialTickets.map((ticket) => (
+        <div key={ticket.id}>
+          <h2 className="text-lg">{ticket.title}</h2>
 
-//*Create a type called params
-//*Note ticket-id doesn't work in javascript so we need the []
-// type TicketPageProps = {
-//     params: {
-//         ["ticket-id"]: string; 
-//     }
-// };
+          <Link href={`/tickets/${ticket.id}`} className="text-sm underline">
+            View
+          </Link>
+        </div>
+      ))}
+    </div>
+  );
+};
 
-//*Best practice
- type TicketPageProps = {
-     params: {
-         ["ticketId"]: string; 
-     }
-    }
-
-//*({params}) - the paren means access params. The {params} destructure 
-//*params after accessing it
-const TicketPage = ({params}: TicketPageProps) =>
- {
-    //return <h2 className= "text-lg"> Ticket Page{params["ticket-id"]}</h2>
-    //*Best practice
-    return <h2 className= "text-lg"> Ticket Page{params.ticketId}</h2>
-
- }
-
-export default TicketPage;
-
-//*Route = http://localhost:3000/tickets/5
+export default TicketsPage;
