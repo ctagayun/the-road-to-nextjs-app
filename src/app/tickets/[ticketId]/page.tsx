@@ -1,6 +1,8 @@
 
 //*This component displays a specific ticketId
-import { initialTickets } from "../../../data";
+//import { initialTickets } from "../../../data";
+import { initialTickets } from "@/data";  //*absolute imports
+
 
 //*Create a type called params
 type TicketPageProps = {

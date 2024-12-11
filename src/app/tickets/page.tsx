@@ -1,6 +1,8 @@
 import Link from "next/link";
 
-import { initialTickets } from "../../data";
+//import { initialTickets } from "../../data";
+import { initialTickets } from "@/data"; //*absolute imports
+import { ticketPath } from "@/paths" //*This is a path constants - see paths.ts
 
 const TicketsPage = () => {
   return (
@@ -17,7 +19,8 @@ const TicketsPage = () => {
         //*  var fullName = `${firstName} ${lastName}`
         <div key={ticket.id}>
           <h2 className="text-lg">{ticket.title}</h2>
-          <Link href={`/tickets/${ticket.id}`} className="text-sm underline">
+          {/* <Link href={`/tickets/${ticket.id}`} className="text-sm underline"> */}
+          <Link href={ticketPath(ticket.id)} className="text-sm underline">
             View
           </Link>
         </div>

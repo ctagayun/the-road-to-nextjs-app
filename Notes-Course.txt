@@ -174,3 +174,16 @@ link to Robin's Github Repo: https://github.com/rwieruch
           - clicking an <a> html anchor tag will cause full page reload while clicking 
           a Link component in NextJS performs a CLIENT-SIDE navigation without a full 
           page reload
+
+    9. Absolute Imports
+        - change TicketPages and TicketPage:
+            import { initialTickets } from "../../data"; to: "@/data"
+            import { initialTickets } from "../../../data"; to: "@/data"
+
+        Absolute Imports provides a consistent way of referencing modules 
+        regardless of their location in the directory structure
+
+    10. Path Constants
+          - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53630964
+
+          create path.ts under /src (not under /app)
