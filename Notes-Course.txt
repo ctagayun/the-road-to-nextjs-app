@@ -187,3 +187,13 @@ link to Robin's Github Repo: https://github.com/rwieruch
           - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53630964
 
           create path.ts under /src (not under /app)
+
+   11. Typed Routes (NEW)
+        - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/57896994
+
+   12. Layout
+        - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53630965
+
+        - in this section we are going to learn NextLayout component
+
+        - the layout.tsx bubbles down to other pages
