@@ -6,16 +6,17 @@ import { initialTickets } from "@/data";  //*absolute imports
 
 //*Create a type called params
 type TicketPageProps = {
-    params: {
+    params: Promise < {
         ["ticketId"]: string; 
-    }
-   }
+    }>
+   };
 
 //*({params}) - the paren means access params. The {params} code destructure's 
 //*params after accessing it
-const TicketPage = ({params}: TicketPageProps) =>
+const TicketPage = async ({params}: TicketPageProps) =>
 {
-   const ticket = initialTickets.find((ticket => ticket.id === params.ticketId));
+   const { ticketId } = await params;
+   const ticket = initialTickets.find((ticket => ticket.id === ticketId));
 
    if (!ticket)
    {

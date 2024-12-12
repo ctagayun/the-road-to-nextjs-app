@@ -120,6 +120,9 @@ link to Robin's Github Repo: https://github.com/rwieruch
            add the-road-to-nextjs-app to vercel
    5. Lint 
         npm run lint
+        add to script in our package.json;
+           "lint-fix": "next lint --fix",
+        run this to fix any lint error
 
    6. Pages: How to navigate to target pages
        https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53630910
@@ -197,3 +200,39 @@ link to Robin's Github Repo: https://github.com/rwieruch
         - in this section we are going to learn NextLayout component
 
         - the layout.tsx bubbles down to other pages
+
+        Quiz:
+          1. How would you add style for all pages related to the ticketId
+          feature, but not the top level HomePage
+             Answer: Add Layout.tsx to app/tickets/layout.tsx
+
+          2. What is the app/folder in Next.Js
+             Answer: The folder where all the file-based routing happens
+
+   13. Scripts
+       - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/57749871
+
+       - we have to define our typescript file .tsx
+
+       - add to scripts in our package.json:
+          "type": "tsc --noEmit"
+
+         this will enable us to run in the command line to check our 
+         whole project for Typescript errors. Instead of relying to the VSCode to display our errors
+
+  
+   14. Const Assertions
+
+      - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/57749872
+
+      - add the following code to TicketsPage to be used in 
+        indicating status of a ticket
+          const TICKET_ICONS = {
+              OPEN: "O",
+              IN_PROGRESS: ">",
+              DONE: "X", //We can later substitute an icon to "X"
+            }
+
+       - modify initialTickets: 
+          append "as const," to status field. 
+          Example: status: "DONE" as const
