@@ -253,3 +253,5 @@ link to Robin's Github Repo: https://github.com/rwieruch
        - first npm install clsx
 
        - import clsx from "clsx"; in TicketsPage
+    
+    17. Animation with Tailwind
