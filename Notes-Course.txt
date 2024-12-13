@@ -1,4 +1,16 @@
 Some Basic React Stuff:
+   What is Jsx:
+      JSX and HTML differ in their integration and usage within 
+      web development. HTML is a standard markup language for
+      creating static web pages, while JSX is a syntax extension 
+      for JavaScript, mainly used with React, allowing HTML-like 
+      code within JavaScript.
+
+    What is Children in React:
+      Children is a special prop that allows us to pass in any type of element. 
+      It could be a number, a string, a boolean, an array of elements or even 
+      another componen
+
    //using arrow functions without parameters
              const Y = () =>{
             };
@@ -255,3 +267,5 @@ link to Robin's Github Repo: https://github.com/rwieruch
        - import clsx from "clsx"; in TicketsPage
     
     17. Animation with Tailwind
+
+       - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53956350
