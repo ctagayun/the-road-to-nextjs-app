@@ -3,6 +3,7 @@ import Link from "next/link";
 //import { initialTickets } from "../../data";
 import { initialTickets } from "@/data"; //*absolute imports
 import { ticketPath } from "@/paths" //*This is a path constants - see paths.ts
+import clsx from "clsx";
 
 //*Constant Assertions
 const TICKET_ICONS = {
@@ -38,8 +39,16 @@ const TicketsPage = () => {
           >
             <div>{TICKET_ICONS[ticket.status]}</div>
             <h3 className="text-lg font-semibold truncate">{ticket.title}</h3>
-            <p className="text-sm text-slate-500 truncate">{ticket.content}</p>
-            
+             {/* //*Applying conditional styling using clsx */}
+            {/* //*<p className="text-sm text-slate-500 truncate">{ticket.content}</p> */}
+            <p
+              className={clsx("text-sm text-slate-500 truncate", {
+                //*conditional styling apply strikethrough if status === DONE
+                "line-through": ticket.status === "DONE",
+              })}
+            >
+              {ticket.content}
+            </p>
             {/* //* Using absolute path to replace: <Link href={`/tickets/${ticket.id}`} className="text-sm underline"> */}
 
             <Link href={ticketPath(ticket.id)} className="text-sm underline">

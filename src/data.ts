@@ -11,10 +11,5 @@ export const initialTickets = [
       content: "This is the second ticket.",
       status: "OPEN" as const,
     },
-    {
-      id: "3",
-      title: "Ticket 3",
-      content: "This is the third ticket.",
-      status: "IN_PROGRESS" as const,
-    },
+    
   ];
