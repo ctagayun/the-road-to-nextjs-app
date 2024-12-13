@@ -236,3 +236,13 @@ link to Robin's Github Repo: https://github.com/rwieruch
        - modify initialTickets: 
           append "as const," to status field. 
           Example: status: "DONE" as const
+
+    15. Tailwind CSS  
+       - A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, 
+         directly in your markup.
+
+       - contains predefined classes that you use in your web app
+
+       - It is still CSS and you use flex grid etc but just quicker to write and maintain. 
+       
+       - https://tailwindcss.com/ 

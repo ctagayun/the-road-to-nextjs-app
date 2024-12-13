@@ -25,7 +25,6 @@ const TicketPage = async ({params}: TicketPageProps) =>
 
    return (
     <div>
-      <h2 className="txt-lg"> {ticket.id}</h2>
       <p className="txt-lg"> {ticket.title}</p>
       <p className="txt-lg"> {ticket.content}</p>
       </div>
