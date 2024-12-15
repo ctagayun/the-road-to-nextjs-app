@@ -1,3 +1,9 @@
+Links to Robins Book The Road To React  
+
+  - about props:
+     https://www.robinwieruch.de/react-pass-props-to-component/
+
+
 Some Basic React Stuff:
    What is Jsx:
       JSX and HTML differ in their integration and usage within 
@@ -269,3 +275,24 @@ link to Robin's Github Repo: https://github.com/rwieruch
     17. Animation with Tailwind
 
        - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53956350
+
+       - add the following to to tailwind.config:
+             keyframes: {
+            "fade-from-top": {
+            from: { opacity: "0", transform: "translateY(-16px)" },
+             to: { opacity: "1", transform: "translateY(0)" },
+           },
+         },
+          animation: {
+          "fade-from-top": "fade-from-top 0.5s ease-out",
+          },
+
+       - reference the above animations to TicketsPage
+
+    18. SVGs
+         - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53956369
+
+         - go to TicketsPage and add icons to used in 
+         - go to to SVG icons: https://heroicons.com/
+              - search for "check" and copy the Jsx 
+                

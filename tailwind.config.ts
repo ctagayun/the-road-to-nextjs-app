@@ -13,6 +13,15 @@ export default {
         foreground: "var(--foreground)",
       },
     },
+    keyframes: {  //* animation stuff
+      "fade-from-top": {
+        from: { opacity: "0", transform: "translateY(-16px)" },
+        to: { opacity: "1", transform: "translateY(0)" }, //*return to previous position
+      },
+    },
+    animation: {  //*reference fade-from-top defined in keyframes above. ease out in 1.5 second
+      "fade-from-top": "fade-from-top 1.5s ease-out",
+    },
   },
   plugins: [],
 } satisfies Config;
