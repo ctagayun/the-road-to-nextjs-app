@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import {Inter} from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
-import { homePath, ticketPath, ticketsPath } from "@/paths";
+import { homePath, ticketsPath } from "@/paths";
+
+//*copy this from shadcn button documentation
+//import { Button } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button";
 
 const inter = Inter ({subsets: ["latin"]});
 
@@ -31,10 +35,31 @@ export default function RootLayout({
             w-full flex py-2.5 px-5 justify-between
           ">
           <div>
-              <Link href={homePath()} className="txt-lg font-bold">Home</Link>
+             {/* 
+                //*asChild means only the child should render which doesn't change anything
+                //*in the UI visually
+                //*remove the  className="txt-lg font-bold" because shadcn will style it for us
+              */}
+             {/* <Button asChild variant="outline">
+                <Link href={homePath()} >Home</Link>
+             </Button> */}
+             <Link
+              href={homePath()}
+              className={buttonVariants({ variant: "outline" })}
+            >
+              Home
+            </Link>
           </div>
           <div>
-              <Link href={ticketsPath()} className="txt-sm underline">Home</Link>
+              {/* <Button asChild variant="outline">
+                <Link href={ticketsPath()}>Tickets</Link>
+              </Button> */}
+              <Link
+              href={ticketsPath()}
+              className={buttonVariants({ variant: "outline" })}
+            >
+              Tickets
+            </Link>
           </div>
          </nav>
          <main   className="

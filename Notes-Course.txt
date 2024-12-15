@@ -296,3 +296,31 @@ link to Robin's Github Repo: https://github.com/rwieruch
          - go to to SVG icons: https://heroicons.com/
               - search for "check" and copy the Jsx 
                 
+    19. UI Library - Setup
+
+        - shadcnui - most popular UI library 
+
+        -  go to https://ui.shadcn.com/ --> Docs --> Installation -> next.Js
+          --> npm --> npx shadcn@latest init -d
+
+        - after running shadcn new stuff were added to:
+            global.css 
+            tailwind.config.css (you might need to reiplemnet the animation we did earlier)
+
+        - whenever we want to use a component such as button we need to install it:
+          Go to Component ---> Button, Sidebar, etc
+
+        - When you install shadcn control it automatically creates a component in your
+          app. Just copy and paste it to your projects
+
+       - install button component:
+           - npx shadcn@latest add button
+           to check if install is a success
+           
+           - go to src/component/ui you should see: buttonn.tsx
+           component created for you.
+
+       - let us use this button component: src/app/layout. Import usage 
+         from the button documentation in shadcn: 
+         import { Button } from "@/components/ui/button"
+
