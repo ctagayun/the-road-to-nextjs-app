@@ -5,6 +5,15 @@ import { initialTickets } from "@/data"; //*absolute imports
 import { ticketPath } from "@/paths" //*This is a path constants - see paths.ts
 import clsx from "clsx";
 
+import  {
+      Card,
+      CardHeader,
+      CardFooter,
+      CardTitle,
+      CardDescription,
+      CardContent }
+  from  "@/components/ui/card";
+
 //*go to to SVG icons: https://heroicons.com/
 //*- search for "check" and copy the Jsx and create a component for the jsx 
 //* and then use it as the icon for the "Done" status in TICKET_ICONS
@@ -95,31 +104,29 @@ const TicketsPage = () => {
 
       <div className="flex-1 flex flex-col items-center gap-y-4 animate-fade-from-top">
         {initialTickets.map((ticket) => (
-          //*  For each ticket we want to return a <div> displaying title and a link
-          //*  Concatenating variables into a string using $
-          //*  var fullName = `${firstName} ${lastName}`
-          <div
-            key={ticket.id}
-            className="w-full max-w-[420px] p-4 border border-slate-100 rounded"
-          >
-            <div>{TICKET_ICONS[ticket.status]}</div>
-            <h3 className="text-lg font-semibold truncate">{ticket.title}</h3>
-             {/* //*Applying conditional styling using clsx */}
-            {/* //*<p className="text-sm text-slate-500 truncate">{ticket.content}</p> */}
-            <p
-              className={clsx("text-sm text-slate-500 truncate", {
-                //*conditional styling apply strikethrough if status === DONE
-                "line-through": ticket.status === "DONE",
-              })}
-            >
-              {ticket.content}
-            </p>
-            {/* //* Using absolute path to replace: <Link href={`/tickets/${ticket.id}`} className="text-sm underline"> */}
+          //*  For each ticket we want to return a <Card> displaying title and a link
+          //*   className="w-full max-w-[420px] is for responsiveness when weresize the page
+          <Card key={ticket.id} className="w-full max-w-[420px]">
+            <CardHeader>
+               <CardTitle className="flex gap-x-2">
+                 <span> {TICKET_ICONS[ticket.status]} </span>
+                 <span className="truncate">{ticket.title}</span>
+               </CardTitle>
+            </CardHeader>
 
-            <Link href={ticketPath(ticket.id)} className="text-sm underline">
-              View
-            </Link>
-          </div>
+            <CardContent>
+            <span className="line-clamp-3 whitespace-break-spaces">
+                {ticket.content}
+              </span>
+            </CardContent>
+
+            {/* //* ticketPath is absolute path to replace: <Link href={`/tickets/${ticket.id}`} className="text-sm underline"> */}
+            <CardFooter>
+              <Link href={ticketPath(ticket.id)} className="text-sm underline">
+                View
+              </Link>
+            </CardFooter>
+          </Card>
         ))}
       </div>
     </div>

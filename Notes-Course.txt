@@ -324,3 +324,24 @@ link to Robin's Github Repo: https://github.com/rwieruch
          from the button documentation in shadcn: 
          import { Button } from "@/components/ui/button"
 
+    20. Cards
+        https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53956392
+
+
+        npx shadcn@latest add 
+        
+        - go tosrc/component/card.tsx
+
+        - go to src/app/tickets/page.tsx and import 
+          import  {
+            Card,
+            CardHeader,
+            CardFooter,
+            CardTitle,
+            CardDescription,
+            CardContent }
+        from  "@/components/ui/card";
+
+     
+
+
