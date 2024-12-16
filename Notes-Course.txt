@@ -324,7 +324,7 @@ link to Robin's Github Repo: https://github.com/rwieruch
          from the button documentation in shadcn: 
          import { Button } from "@/components/ui/button"
 
-    20. Cards
+    20. Cards Component
         https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53956392
 
 
@@ -342,6 +342,33 @@ link to Robin's Github Repo: https://github.com/rwieruch
             CardContent }
         from  "@/components/ui/card";
 
-     
+     21. Separator Componet:
+        - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53956393
+          npx shadcn@latest add separator
 
+     22. Icon Component
+        - go to https://lucide.dev/guide/packages/lucide-react
+          where you can just pick the icon you want
+        - no need to install Lucide because it is already installed.
+        - see package.json
+              "lucide-react": "^0.468.0",
+              see dependencies in package.json: 
+        - you can remove now our custom ICONS and search for whatever icon 
+          you use from lucide
 
+    
+      - next open up layout.jsx
+         - rename Home to "Ticket-Boundary"
+         - import { LucideKanban } from "lucide-react";
+
+    21. Theming
+       - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53956398
+
+       - open layout.tsx and TicketsPage
+       - go to shadcn -->Themes -->Default --> Customize (select yellow)\
+         --> copy code --> Theme Dialog Box pops up
+
+       - copy code from the Popup --> open global.css, delete the old Theme
+         and paste the new theme.
+
+       - run the app you should see the ticket button colored yellow

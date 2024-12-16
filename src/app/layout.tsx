@@ -3,7 +3,8 @@ import {Inter} from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { homePath, ticketsPath } from "@/paths";
-
+import { LucideKanban } from "lucide-react"
+;
 //*copy this from shadcn button documentation
 //import { Button } from "@/components/ui/button"
 import { buttonVariants } from "@/components/ui/button";
@@ -45,9 +46,12 @@ export default function RootLayout({
              </Button> */}
              <Link
               href={homePath()}
-              className={buttonVariants({ variant: "outline" })}
+              //*Change varian to ghost
+              className={buttonVariants({ variant: "ghost" })}
             >
-              Home
+              {/* //*Icon */}
+              <LucideKanban />
+              <h1 className="text-lg font-semibold">TicketBounty</h1>
             </Link>
           </div>
           <div>
@@ -56,7 +60,8 @@ export default function RootLayout({
               </Button> */}
               <Link
               href={ticketsPath()}
-              className={buttonVariants({ variant: "outline" })}
+              //*change variant from outline to default
+              className={buttonVariants({ variant: "default" })}
             >
               Tickets
             </Link>
