@@ -400,6 +400,10 @@ link to Robin's Github Repo: https://github.com/rwieruch
           - create a reusable component called PlaceHolder
 
           - go to [ticketId]/TicketPage and replace ___ with PlaceHolder component
+  
+          - Quiz: 
+            1. What's the difference between ReactNode and ReactElement?
+               Answer: ReactNode can represent anything that can be rendered in React, while ReactElement is a specific object that describes what to render.
     =================================
     Section Feature folder
     =================================
