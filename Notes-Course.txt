@@ -295,8 +295,12 @@ link to Robin's Github Repo: https://github.com/rwieruch
          - go to TicketsPage and add icons to used in 
          - go to to SVG icons: https://heroicons.com/
               - search for "check" and copy the Jsx 
-                
-    19. UI Library - Setup
+
+    =================================           
+    Section UI Library:
+    =================================
+    
+       19. UI Library - Setup
 
         - shadcnui - most popular UI library 
 
@@ -324,7 +328,7 @@ link to Robin's Github Repo: https://github.com/rwieruch
          from the button documentation in shadcn: 
          import { Button } from "@/components/ui/button"
 
-    20. Cards Component
+     20. Cards Component
         https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53956392
 
 
@@ -342,11 +346,11 @@ link to Robin's Github Repo: https://github.com/rwieruch
             CardContent }
         from  "@/components/ui/card";
 
-     21. Separator Componet:
+      21. Separator Componet:
         - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53956393
           npx shadcn@latest add separator
 
-     22. Icon Component
+      22. Icon Component
         - go to https://lucide.dev/guide/packages/lucide-react
           where you can just pick the icon you want
         - no need to install Lucide because it is already installed.
@@ -361,7 +365,7 @@ link to Robin's Github Repo: https://github.com/rwieruch
          - rename Home to "Ticket-Boundary"
          - import { LucideKanban } from "lucide-react";
 
-    21. Theming
+     21. Theming
        - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53956398
 
        - open layout.tsx and TicketsPage
@@ -372,3 +376,70 @@ link to Robin's Github Repo: https://github.com/rwieruch
          and paste the new theme.
 
        - run the app you should see the ticket button colored yellow
+
+    =================================
+    Section Components folder
+    =================================
+      1. Heading
+          - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53956399
+          - create a reusable heading component in src/app/component
+          - cut heading in app/tickets/TicketsPage and paste it in the reusable 
+            heading.tsx component
+
+      2. Header
+
+      3. Place Holder 
+
+    =================================
+    Section Feature folder
+    =================================
+      1.
+
+      2.
+
+      3.
+
+    =================================
+    Section Project Structure
+    =================================
+      1.
+
+      2.
+
+      3.
+
+    =================================
+    Section Light and Dark Mode
+    =================================
+      1.
+
+      2.
+
+
+    =================================
+    Section Server vs Client Components
+    =================================
+      1.
+
+      2.
+
+      3. 
+
+
+      4. 
+
+    =================================
+    Section Server Components
+    =================================
+      1.
+
+      2.
+
+      3. 
+
+    =================================
+    Section Fallback Routes
+    =================================
+      1.
+
+      2.

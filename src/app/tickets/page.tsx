@@ -4,8 +4,6 @@ import Link from "next/link";
 //import { initialTickets } from "../../data";
 import { initialTickets } from "@/data"; //*absolute imports
 import { ticketPath } from "@/paths" //*This is a path constants - see paths.ts
-import clsx from "clsx";
-
 import  {
       Card,
       CardHeader,
@@ -15,7 +13,8 @@ import  {
       CardContent }
   from  "@/components/ui/card";
 
-  import { Separator } from "@/components/ui/separator"
+  //*Reusable heading component
+import { Heading } from "@/components/heading";
 
 //*Constant Assertions
 const TICKET_ICONS = {
@@ -29,14 +28,9 @@ const TicketsPage = () => {
   return (
     //*add animate-fade-in-from-top that we created in tailwind.config.ts
     <div className="flex-1 flex flex-col gap-y-8">
-      <div>
-        <h2 className="text-3xl font-bold tracking-tight">Tickets</h2>
-        <p className="text-sm text-muted-foreground">
-          All your tickets at one place
-        </p>
-      </div>
-      
-       <Separator/>
+        {/* //*Heading is a reusable component. We can reuse this in Homepage.tsx */}
+        < Heading title="Tickets" description="All your tickets in one page"/>
+
         {/* 
          //*map generates a new array to variable called "ticket"
          //*Within the map() method, we have access to each object and properties of "ticket"
