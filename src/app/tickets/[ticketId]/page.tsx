@@ -1,7 +1,10 @@
 
 //*This component displays a specific ticketId
-//import { initialTickets } from "../../../data";
-import { initialTickets } from "@/data";  //*absolute imports
+import Link from "next/link";
+import { Placeholder } from "@/components/placeholder";
+import { Button } from "@/components/ui/button";
+import { initialTickets } from "@/data";
+import { ticketsPath } from "@/paths";
 
 
 //*Create a type called params
@@ -18,10 +21,18 @@ const TicketPage = async ({params}: TicketPageProps) =>
    const { ticketId } = await params;
    const ticket = initialTickets.find((ticket => ticket.id === ticketId));
 
-   if (!ticket)
-   {
-      return <div> Ticket Not Found </div>
-   }
+   if (!ticket) {
+      return (
+        <Placeholder
+          label="Ticket not found"
+          button={
+            <Button asChild variant="outline">
+              <Link href={ticketsPath()}>Go to Tickets</Link>
+            </Button>
+          }
+        />
+      );
+    }
 
    return (
     <div>

@@ -397,6 +397,9 @@ link to Robin's Github Repo: https://github.com/rwieruch
       3. Place Holder
           - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53956403 
 
+          - create a reusable component called PlaceHolder
+
+          - go to [ticketId]/TicketPage and replace ___ with PlaceHolder component
     =================================
     Section Feature folder
     =================================
