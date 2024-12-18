@@ -1,28 +1,9 @@
-import { LucideCheckCircle, LucideFileText, LucidePencil } from "lucide-react";
-import Link from "next/link";
 
-//import { initialTickets } from "../../data";
 import { initialTickets } from "@/data"; //*absolute imports
-import { ticketPath } from "@/paths" //*This is a path constants - see paths.ts
-import  {
-      Card,
-      CardHeader,
-      CardFooter,
-      CardTitle,
-      CardDescription,
-      CardContent }
-  from  "@/components/ui/card";
 
   //*Reusable heading component
 import { Heading } from "@/components/heading";
-
-//*Constant Assertions
-const TICKET_ICONS = {
-  OPEN: <LucideFileText />,
-  DONE: <LucideCheckCircle />,
-  IN_PROGRESS: <LucidePencil />,
-};
-
+import { Ticketitem } from "@/features/ticket/components/ticket-item";
 
 const TicketsPage = () => {
   return (
@@ -45,28 +26,10 @@ const TicketsPage = () => {
       <div className="flex-1 flex flex-col items-center gap-y-4 animate-fade-from-top">
         {initialTickets.map((ticket) => (
           //*  For each ticket we want to return a <Card> displaying title and a link
-          //*   className="w-full max-w-[420px] is for responsiveness when weresize the page
-          <Card key={ticket.id} className="w-full max-w-[420px]">
-            <CardHeader>
-               <CardTitle className="flex gap-x-2">
-                 <span> {TICKET_ICONS[ticket.status]} </span>
-                 <span className="truncate">{ticket.title}</span>
-               </CardTitle>
-            </CardHeader>
-
-            <CardContent>
-            <span className="line-clamp-3 whitespace-break-spaces">
-                {ticket.content}
-              </span>
-            </CardContent>
-
-            {/* //* ticketPath is absolute path to replace: <Link href={`/tickets/${ticket.id}`} className="text-sm underline"> */}
-            <CardFooter>
-              <Link href={ticketPath(ticket.id)} className="text-sm underline">
-                View
-              </Link>
-            </CardFooter>
-          </Card>
+          //*   className="w-full max-w-[420px] is for responsiveness when weresize 
+          //*the page.
+          //* The rendering of tickets is done in a TicketItem component
+          <Ticketitem key={ticket.id} ticket={ticket} />
         ))}
       </div>
     </div>
