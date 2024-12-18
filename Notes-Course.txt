@@ -410,10 +410,22 @@ link to Robin's Github Repo: https://github.com/rwieruch
       1. Intro/Extract
           - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/54204509
           - create src/features/components/ticket-item.tsx folder and 11_files
-          - go to src/app/tickets/[ticketId] TicketPages 
-      2.
+           - go to src/app/tickets/[ticketId] TicketPages and extract logic to display 
+          tickets into resusable component called Ticketitem.tsx
+           
+      2. Modify Refactor Ticketitem.tsx component because there will be more functions like editing 
+      and deleting tickets. 
+        - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/54204594
 
-      3.
+        - move the "View" link
+
+        - add "Update, Delete.." tasks to th right of the ticket
+
+        - open TicketItem.tsx
+
+      3. Reuse
+          - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/54204596
+         
 
     =================================
     Section Project Structure
