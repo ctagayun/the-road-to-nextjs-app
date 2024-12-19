@@ -5,6 +5,7 @@ import { Placeholder } from "@/components/placeholder";
 import { Button } from "@/components/ui/button";
 import { initialTickets } from "@/data";
 import { ticketsPath } from "@/paths";
+import { Ticketitem } from "@/features/ticket/components/ticket-item";
 
 
 //*Create a type called params
@@ -35,10 +36,21 @@ const TicketPage = async ({params}: TicketPageProps) =>
     }
 
    return (
-    <div>
-      <p className="txt-lg"> {ticket.title}</p>
-      <p className="txt-lg"> {ticket.content}</p>
-      </div>
+    // <div>
+    //   <p className="txt-lg"> {ticket.title}</p>
+    //   <p className="txt-lg"> {ticket.content}</p>
+    //  </div>
+
+     //* reuse TicketItem.tsx here.
+     //* Add a isDetail prop to let Ticketitem is coming 
+     //* from individual TicketPage (not TicketsPage). Add 
+     //* isDetail to TicketItemProps in TicketItem component
+
+     //* Now go to TicketsPage and add "ticket" as prop so that
+     //* isDetail bool can be passed as prop
+     <div className="flex justify-center animate-fade-in-from-top">
+       <Ticketitem ticket={ticket} isDetail />
+     </div>
    )
 
 }

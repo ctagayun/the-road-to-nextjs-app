@@ -256,6 +256,8 @@ link to Robin's Github Repo: https://github.com/rwieruch
           Example: status: "DONE" as const
 
     15. Tailwind CSS  
+         For CSS - see Tailwind: https://tailwindcss.com/width (spacing, sizing, etc)
+
        - A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, 
          directly in your markup.
 
@@ -290,6 +292,8 @@ link to Robin's Github Repo: https://github.com/rwieruch
        - reference the above animations to TicketsPage
 
     18. SVGs
+         For CSS - see Tailwind: https://tailwindcss.com/width (spacing, sizing, etc)
+
          - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53956369
 
          - go to TicketsPage and add icons to used in 
@@ -297,8 +301,9 @@ link to Robin's Github Repo: https://github.com/rwieruch
               - search for "check" and copy the Jsx 
 
     =================================           
-    Section UI Library:
+    Section UI Library: 
     =================================
+     For CSS - see Tailwind: https://tailwindcss.com/width (spacing, sizing, etc)
     
        19. UI Library - Setup
 
@@ -380,6 +385,7 @@ link to Robin's Github Repo: https://github.com/rwieruch
     =================================
     Section Components folder
     =================================
+      For CSS - see Tailwind: https://tailwindcss.com/width (spacing, sizing, etc)
       1. Heading
           - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53956399
           - create a reusable heading component in src/app/component
@@ -406,7 +412,9 @@ link to Robin's Github Repo: https://github.com/rwieruch
                Answer: ReactNode can represent anything that can be rendered in React, while ReactElement is a specific object that describes what to render.
     =================================
     Section Feature folder
-    =================================
+    ================================
+      For CSS - see Tailwind: https://tailwindcss.com/width (spacing, sizing, etc)
+
       1. Intro/Extract
           - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/54204509
           - create src/features/components/ticket-item.tsx folder and 11_files
@@ -424,12 +432,20 @@ link to Robin's Github Repo: https://github.com/rwieruch
         - open TicketItem.tsx
 
       3. Reuse
+          
           - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/54204596
          
+          - in this lesson we will reuse the resusable TicketItem component
 
+          - navigate to app/[ticket]/individual TicketPage folder
+            (see notes about the modifications)
+
+          - let's add more styling to "TicketItem" let's import clsx
     =================================
     Section Project Structure
     =================================
+      For CSS - see Tailwind: https://tailwindcss.com/width (spacing, sizing, etc)
+
       1.
 
       2.

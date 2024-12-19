@@ -29,6 +29,8 @@ const TicketsPage = () => {
           //*   className="w-full max-w-[420px] is for responsiveness when weresize 
           //*the page.
           //* The rendering of tickets is done in a TicketItem component
+          //* add ticket as prop so that isDetail can be accesed in TicketPage
+          //* Now go to TicketItem and use isDetail for conditional rendering
           <Ticketitem key={ticket.id} ticket={ticket} />
         ))}
       </div>
