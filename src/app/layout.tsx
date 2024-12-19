@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {Inter} from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 ;
 
 
@@ -17,22 +18,24 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
-}>) 
-
-
-   {
+  children: React.ReactNode; //*Where ReactElement only represents JSX, 
+                             //* ReactNode represents everything that can be rendered.
+}>) {
   return (
-    <html lang="en">
-      <body className={inter.className}> 
-        <Header />
-         <main   className="
-            min-h-screen flex-1
-            overflow-y-auto overflow-x-hidden
-            py-24 px-8
-            bg-secondary/20
-            flex flex-col
-          ">{children} </main>
+    <html suppressHydrationWarning lang="en">
+      <body className={inter.className}>
+        {/* //*Wrap the Header and Main inside the our custom ThemeProvider component */}
+        <ThemeProvider>
+            <Header />
+            <main   className="
+                  min-h-screen flex-1
+                  overflow-y-auto overflow-x-hidden
+                  py-24 px-8
+                  bg-secondary/20
+                  flex flex-col
+                ">{children} 
+              </main>
+              </ThemeProvider> 
       </body>
     </html>
   );

@@ -11,7 +11,7 @@ import { Ticketitem } from "@/features/ticket/components/ticket-item";
 //*Create a type called params
 type TicketPageProps = {
     params: Promise < {
-        ["ticketId"]: string; 
+        "ticketId": string; 
     }>
    };
 

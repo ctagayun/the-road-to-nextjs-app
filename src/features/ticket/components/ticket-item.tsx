@@ -23,7 +23,7 @@ const Ticketitem = ({ticket, isDetail}: TicketItemProps) => {
         <Button variant="outline" size="icon" asChild>
             <Link href={ticketPath(ticket.id)} >
                 {/* //*Icon */}
-                <LucideSquareArrowOutUpRight className="h-2 w-4" />
+                <LucideSquareArrowOutUpRight className="h-4 w-4" />
              </Link>
         </Button>
     );

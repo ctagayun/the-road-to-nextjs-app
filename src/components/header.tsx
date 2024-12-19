@@ -4,6 +4,7 @@ import { homePath, ticketsPath } from "@/paths";
 //*copy this from shadcn button documentation
 //import { Button } from "@/components/ui/button"
 import { buttonVariants } from "@/components/ui/button";
+import { ThemeSwitcher } from "./theme/theme-switcher";
 
 const Header = () => {
 
@@ -15,7 +16,7 @@ const Header = () => {
         border-b bg-background/95 backdrop-blur
         w-full flex py-2.5 px-5 justify-between
         ">
-        <div>
+        <div className="flex align-items gap-x-2">
             {/* 
             //*asChild means only the child should render which doesn't change anything
             //*in the UI visually
@@ -31,20 +32,24 @@ const Header = () => {
         >
             {/* //*Icon */}
             <LucideKanban />
-            <h1 className="text-lg font-semibold">TicketBounty</h1>
-        </Link>
+            <h1 className="ml-2 text-lg font-semibold">TicketBounty</h1>
+           </Link>
         </div>
-        <div>
+
+        <div className="flex align-items gap-x-2">
             {/* <Button asChild variant="outline">
             <Link href={ticketsPath()}>Tickets</Link>
             </Button> */}
+
+            <ThemeSwitcher />
+            
             <Link
-            href={ticketsPath()}
-            //*change variant from outline to default
-            className={buttonVariants({ variant: "default" })}
-        >
-            Tickets
-        </Link>
+                href={ticketsPath()}
+               //*change variant from outline to default
+               className={buttonVariants({ variant: "default" })}
+             >
+               Tickets
+            </Link>
        </div>
     </nav>
   );

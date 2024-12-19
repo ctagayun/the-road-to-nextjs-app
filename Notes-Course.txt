@@ -1,7 +1,14 @@
 Links to Robins Book The Road To React  
-
+  Notes about Next.js:
   - about props:
      https://www.robinwieruch.de/react-pass-props-to-component/
+
+  
+
+  -  In Next.js every component is server component by default and
+     server components cannt use Hooks or assign event handlers. 
+     To make a component a client component and use event handlers
+     use a directive called: "use client"
 
 
 Some Basic React Stuff:
@@ -455,14 +462,31 @@ link to Robin's Github Repo: https://github.com/rwieruch
     =================================
     Section Light and Dark Mode
     =================================
-      1.
+      https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53956406
+      For CSS - see Tailwind: https://tailwindcss.com/width (spacing, sizing, etc)
+      For themes: https://www.npmjs.com/package/next-themes
 
-      2.
+      1. In this section we will implement "Dark Mode" in our application
+      
 
+      2. Create a toggle button to switch between dark and light Mode
+          - npm install next-themes --force
+         
+          - first we want to create a "provider" component which will provide a 
+          theme to the whole application based on the user selection:
+             - go to src/component create theme folder  
+  
+          - next we will implement ThemeSwitcher component. ThemeSwitcher 
+          is a hook. In Next.js every component is server component by default and
+          server components cannt use Hooks or assign event handlers for 
+          buttons.
+
+          - next use the Switcher in src/app/header
 
     =================================
     Section Server vs Client Components
     =================================
+      For CSS - see Tailwind: https://tailwindcss.com/width (spacing, sizing, etc)
       1.
 
       2.
@@ -475,6 +499,7 @@ link to Robin's Github Repo: https://github.com/rwieruch
     =================================
     Section Server Components
     =================================
+      For CSS - see Tailwind: https://tailwindcss.com/width (spacing, sizing, etc)
       1.
 
       2.
@@ -484,6 +509,47 @@ link to Robin's Github Repo: https://github.com/rwieruch
     =================================
     Section Fallback Routes
     =================================
+      For CSS - see Tailwind: https://tailwindcss.com/width (spacing, sizing, etc)
+      1.
+
+      2.
+
+    =================================
+    Section Fallback Routes
+    =================================
+      For CSS - see Tailwind: https://tailwindcss.com/width (spacing, sizing, etc)
+      1.
+
+      2.
+
+    =================================
+    Section Fallback Routes
+    =================================
+      For CSS - see Tailwind: https://tailwindcss.com/width (spacing, sizing, etc)
+      1.
+
+      2.
+
+    =================================
+    Section Fallback Routes
+    =================================
+      For CSS - see Tailwind: https://tailwindcss.com/width (spacing, sizing, etc)
+      1.
+
+      2.
+
+    =================================
+    Section Fallback Routes
+    =================================
+      For CSS - see Tailwind: https://tailwindcss.com/width (spacing, sizing, etc)
+      1.
+
+      2.
+
+    =================================
+    Section Fallback Routes
+    =================================
+      For CSS - see Tailwind: https://tailwindcss.com/width (spacing, sizing, etc)
       1.
 
       2.
