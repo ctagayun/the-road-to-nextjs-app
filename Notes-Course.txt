@@ -486,15 +486,21 @@ link to Robin's Github Repo: https://github.com/rwieruch
     =================================
     Section Server vs Client Components
     =================================
+      https://rwieruch.teachable.com/courses/the-road-to-next/lectures/54247908
       For CSS - see Tailwind: https://tailwindcss.com/width (spacing, sizing, etc)
-      1.
+      
+      1. Data Fetching in Client Components 
+          - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53956408
 
-      2.
+          - create queries folder in src/features/ticket/get-ticket.tsx
 
-      3. 
+          
+      2. Characteristics of Client Component
+
+      3. Client Server Boundary
 
 
-      4. 
+      4. Client Server Composition
 
     =================================
     Section Server Components

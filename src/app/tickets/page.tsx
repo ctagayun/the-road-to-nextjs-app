@@ -1,11 +1,25 @@
 
+"use client";
 import { initialTickets } from "@/data"; //*absolute imports
 
   //*Reusable heading component
 import { Heading } from "@/components/heading";
 import { Ticketitem } from "@/features/ticket/components/ticket-item";
+import { useEffect, useState } from "react";
+import { Ticket } from "@/features/types";
 
 const TicketsPage = () => {
+
+  //*this useEffect runs only once because dependency array "[] is empty 
+  useEffect(() => { }, []);
+
+  //* fetch data. to fetch data you need create a useState hook.
+  //* import Ticket from types
+  //*https://www.robinwieruch.de/react-usestate-hook/
+  //*note: useState returns an array
+
+  const [tickets, setTickets] = useState<Ticket[]>([]);
+
   return (
     //*add animate-fade-in-from-top that we created in tailwind.config.ts
     <div className="flex-1 flex flex-col gap-y-8">
@@ -40,3 +54,13 @@ const TicketsPage = () => {
 
 
 export default TicketsPage;
+
+//useState
+ //By using useState, we are telling React that we want to have a 
+ //stateful value which changes over time. And whenever this stateful value 
+ //changes, the affected components (here: TicketItem component) 
+ //will re-render to use it (here: to display the recent value).
+
+  //concatenating variables into a string
+ //var fullName = `${firstName} ${lastName}`
+ //console.log(fullName);
