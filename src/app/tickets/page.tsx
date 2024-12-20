@@ -1,17 +1,24 @@
 
 "use client";
-import { initialTickets } from "@/data"; //*absolute imports
-
   //*Reusable heading component
 import { Heading } from "@/components/heading";
 import { Ticketitem } from "@/features/ticket/components/ticket-item";
 import { useEffect, useState } from "react";
 import { Ticket } from "@/features/types";
+import { getTickets } from "@/features/queries/get-tickets";
 
 const TicketsPage = () => {
 
   //*this useEffect runs only once because dependency array "[] is empty 
-  useEffect(() => { }, []);
+  //*do the data fetching here
+  useEffect(() => {
+     const fetchTickets = async () => {
+        const result = await getTickets();
+
+        setTickets(result); //*in the end this stores value into state variable "tickets"
+     }
+     fetchTickets();
+   }, []);
 
   //* fetch data. to fetch data you need create a useState hook.
   //* import Ticket from types
@@ -38,7 +45,7 @@ const TicketsPage = () => {
        */}
 
       <div className="flex-1 flex flex-col items-center gap-y-4 animate-fade-from-top">
-        {initialTickets.map((ticket) => (
+        {tickets.map((ticket) => (
           //*  For each ticket we want to return a <Card> displaying title and a link
           //*   className="w-full max-w-[420px] is for responsiveness when weresize 
           //*the page.
