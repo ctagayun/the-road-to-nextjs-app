@@ -1,5 +1,5 @@
 
-
+//"useClient";
 //*First import from next-themes. Since our own provider's
 //*is named ThemeProvider we rename next-theme provider as
 //* as BaseThemeProvider.
@@ -18,6 +18,7 @@ type ThemeProviderProps = {
 
 //* we define our own provider. Then type the children as ThemeProviderProps
 const ThemeProvider = ({ children }: ThemeProviderProps) => {
+  console.log("Where am i executing? ThemeProvider");
   return (
     <BaseThemeProvider
       //*add configuration for the theme provider coming fron NextThemes

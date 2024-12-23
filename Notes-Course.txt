@@ -498,20 +498,73 @@ link to Robin's Github Repo: https://github.com/rwieruch
       2. Characteristics of Client Component
 
       3. Client Server Boundary
-
+         - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/53956413
+         - all components in next.js are server components by default
+         - if the parent of TicketItem like TicketPages has "useClient" TicketItem becomes client component
+         - if the parent of TicketItem like TicketPage has no "useClient" TicketItem becomes server component
+         - if TicketItem is using "useClient", regardless of its parent it becomes a client component
+           and all of its descendants as well.
 
       4. Client Server Composition
+         - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/54249828
+
+         - bring up ThemeProvider which is used in src/app/layout.tsx.
+                
+         -  Component Composition Pattern. It is a design pattern
+            that allows us to have Server Components with Client 
+            components as ancestor. See src/app/layout.tsx
+
+         - now if we add "useClient" to ThemeProvider since it is used at 
+           the very top of layout.tsx and since we are using a component pattern
+           anything in between as children (we are using composition pattern here)
+           are no affected by "useClient" directive. Everything can stay as 
+           server component.
 
     =================================
     Section Server Components
     =================================
+      History of Server Components: https://rwieruch.teachable.com/courses/the-road-to-next/lectures/54250104
       For CSS - see Tailwind: https://tailwindcss.com/width (spacing, sizing, etc)
-      1.
+   
+      1. Data Fetching in Server Components:
+          - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/54250104
 
-      2.
+          - modify TicketsPage to make it server component (remove the useClient)
+          you will see the console log "Where am i exeuting? ThemeProvider" displayed
+          in the terminal (not in the browser - do F12 (or right click page --> inspect) to 
+          to go to Chrome Dev tools you will the log is not there)
 
-      3. 
 
+      2. SSR vs Server Components:
+          - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/54251619
+
+          - server components vs client components:
+             - server component executes code in the server such a database access and
+               it renders in the server as well but re-renders and in the client (browser). 
+               Server component only  executes the React code, and outputs the HTML to the client and the 
+               browser only receives the HTML not the React code and JavaScript
+               code.
+
+               While client components and server components are both server-side rendered,
+               the client components are executed on the client again with the 
+               React Code and JavaScript code.
+
+               Therefore the advantage of Server components is they reduce the amount 
+               of code needed on the client because they only return HTML (not the code to generate
+               the HTML)
+           
+          - client components:
+             - server components  are still
+             server-side rendered but re-rendered or hydrate on the client again 
+             to make all the event handling and so on happens. 
+
+      3. Server-Side Rendering
+          - https://rwieruch.teachable.com/courses/the-road-to-next/lectures/58022419
+
+          - open TicketPage and implement server component rendering 
+              - create features/queries/get-ticket.tsx
+
+              - now implement get-ticket.tsx in TicketPage
     =================================
     Section Fallback Routes
     =================================

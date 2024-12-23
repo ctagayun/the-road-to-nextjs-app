@@ -1,4 +1,7 @@
+//*This becomes a client component even in the absence of "useClient" directive
+//*because its parent TicketsPages is a client component
 import clsx from "clsx";
+
 import Link from "next/link";
 import { ticketPath } from "@/paths" //*This is a path constants - see paths.ts
 import  {

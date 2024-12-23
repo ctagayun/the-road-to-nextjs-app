@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { initialTickets } from "@/data";
 import { ticketsPath } from "@/paths";
 import { Ticketitem } from "@/features/ticket/components/ticket-item";
+import { getTicket } from "@/features/queries/get-ticket";
 
 
 //*Create a type called params
@@ -19,8 +20,14 @@ type TicketPageProps = {
 //*params after accessing it
 const TicketPage = async ({params}: TicketPageProps) =>
 {
-   const { ticketId } = await params;
-   const ticket = initialTickets.find((ticket => ticket.id === ticketId));
+   //*const { ticketId } = await params;
+   //*const ticket = initialTickets.find((ticket => ticket.id === ticketId));
+
+   //*Let's use src/component/features/queries/get-ticket
+   //*get-ticket does server-side rendering. It renders the HTML in the
+   //*server and hand it over to the client. It is fast because
+   //*the client doesn't do anything anymore.
+   const ticket = await getTicket((await params).ticketId);
 
    if (!ticket) {
       return (
